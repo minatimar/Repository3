@@ -19,8 +19,7 @@ For now you have only one hard coded character card for Rick Sanchez in your HTM
 them dynamically in our JavaScript.
 
 - Write a function `createCharacterCard` inside the `card.js` file and export it.
-- You can use `innerHTML` to generate the HTML of the card. Cut the relevant HTML code of the card
-  from the `index.html` and use it in your function.
+- You can use `innerHTML` to generate the HTML of the card. Cut the relevant HTML code of the card from the `index.html` and use it in your function.
 - The following elements of the card need to be dynamic and change for each character:
   - the `src` of the image
   - the name of the character
