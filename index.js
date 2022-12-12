@@ -17,3 +17,22 @@ const searchQuery = "";
 
 const returnValue = createCharacterCard({ name: "test" });
 console.log(returnValue);
+cardContainer.append(returnValue);
+
+async function fetchData() {
+  try {
+    const response = await fetch("https://rickandmortyapi.com/api/character");
+    if (response.ok) {
+      const data = await response.json();
+      const firstCharacter = createCharacterCard(data.results[2]);
+      cardContainer.append(firstCharacter);
+      console.log(data);
+    } else {
+      console.error("Bad Response");
+    }
+  } catch (error) {
+    console.error("error.message");
+  }
+}
+
+fetchData();
